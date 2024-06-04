@@ -37,8 +37,4 @@ next-env.d.ts
 
 
 
-.husky/pre-commit
 .husky
-package.json
-package-lock.json
-*storybook.log
