@@ -17,7 +17,7 @@ export default function Home() {
 
       {/* awdawd sdsadasdsdasdassdawd*/}
 
-      {/* awdwad asdasd*/}
+      {/* awdwad asdasdasdasdasd*/}
       
       
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
