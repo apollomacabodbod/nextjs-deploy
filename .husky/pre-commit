@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Source the Husky script only if it exists
-husky_sh_file="$(dirname "$0")/_/husky.sh"
+husky_sh_file="$(dirname "$0")/_/.husky.sh"
 if [ -f "$husky_sh_file" ]; then
     . "$husky_sh_file"
 fi
