@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Source the Husky script only if it exists
-husky_sh_file="$(dirname "$0")/_/.husky.sh"
-if [ -f "$husky_sh_file" ]; then
-    . "$husky_sh_file"
-fi
+# husky_sh_file="$(dirname "$0")/_/husky.sh"
+# if [ -f "$husky_sh_file" ]; then
+#     . "$husky_sh_file"
+# fi
 
 # Safely unstage all ignored files
 git ls-files -i --exclude-standard | while read -r file; do
@@ -15,7 +15,7 @@ done
 
 
 
-# Run additional pre-commit checks (if any) dawdwawdawddsdwd
+# Run additional pre-commit checks (if any) dawdwawdawddsdwdawdawd
 yarn pre-commit
 
 # Allow the commit to proceed if no issues
