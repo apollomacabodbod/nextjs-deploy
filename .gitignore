@@ -36,8 +36,9 @@ yarn-error.log*
 next-env.d.ts
 
 
-gitignore
+
 .husky/pre-commit
 .husky
 package.json
 package-lock.json
+*storybook.log

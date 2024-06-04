@@ -15,7 +15,7 @@ done
 
 
 
-# Run additional pre-commit checks (if any) dawdwawdawddsdwdawdawd
+# Run additional pre-commit checks (if any) dawdwawdawddsdwdawdawddawdwa
 yarn pre-commit
 
 # Allow the commit to proceed if no issues
