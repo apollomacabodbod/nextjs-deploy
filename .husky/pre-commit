@@ -13,7 +13,9 @@ git ls-files -i --exclude-standard | while read -r file; do
     fi
 done
 
-# Run additional pre-commit checks (if any)
+
+
+# Run additional pre-commit checks (if any) dawdw
 yarn pre-commit
 
 # Allow the commit to proceed if no issues
