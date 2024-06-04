@@ -6,11 +6,8 @@ if [ -f "$husky_sh_file" ]; then
     . "$husky_sh_file"
 fi
 
-# Add all unstaged changes to the staging area
-git add --all
-
-# Unstage all changes that have not been added
-git diff --cached --name-only --diff-filter=d | xargs git reset --
+# Unstage the file without affecting the working directory
+git reset --mixed .
 
 # Run pre-commit checks (if any)
 yarn pre-commit
