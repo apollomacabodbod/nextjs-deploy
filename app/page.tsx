@@ -17,7 +17,11 @@ export default function Home() {
 
       {/* awdawd sdsadasdsdasdassdawd*/}
 
+<<<<<<< HEAD
       {/* awdwad asdasdasdasdasdsssssssssssssasdasdasdasdasdasdasd*/}
+=======
+      {/* awdwad asdasdasdasdasdsssssssssssssasdasdss*/}
+>>>>>>> ae49e04 (g)
       
       
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
