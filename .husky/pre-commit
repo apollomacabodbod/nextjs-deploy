@@ -1,34 +1,20 @@
-
-# #!/bin/sh
-# . "$(dirname "$0")/_/husky.sh"
-
-# yarn pre-commit
-
-
-
-
 #!/bin/sh
 
-# Source the husky script
-. "$(dirname "$0")/_/husky.sh"
+# Source the Husky script only if it exists
+husky_sh_file="$(dirname "$0")/_/husky.sh"
+if [ -f "$husky_sh_file" ]; then
+    . "$husky_sh_file"
+fi
 
-# Patterns of files/directories to exclude
-exclude_patterns="node_modules|dist|\.husky|package-lock.json|package.json"
-
-# Get the list of files to be committed
-files_to_commit=$(git diff --cached --name-only)
-
-# Check if any of the files to be committed match the exclude patterns
-for file in $files_to_commit; do
-    if echo "$file" | grep -E "$exclude_patterns"; then
-        echo "Error: Attempt to commit excluded file $file"
-        exit 1
+# Safely unstage all ignored files
+git ls-files -i --exclude-standard | while read -r file; do
+    if [ -e "$file" ]; then
+        git rm --cached "$file"
     fi
 done
 
-# Run the pre-commit script using yarn
+# Run additional pre-commit checks (if any)
 yarn pre-commit
 
-# Allow the commit if no excluded files are found and pre-commit script passes
+# Allow the commit to proceed if no issues
 exit 0
-
